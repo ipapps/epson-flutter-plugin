@@ -24,4 +24,8 @@ A new Flutter plugin project.
     s.preserve_paths = 'libepos2.xcframework/**/*'
     s.xcconfig = { 'OTHER_LDFLAGS' => '-framework libepos2' }
     s.vendored_frameworks = 'libepos2.xcframework'
+
+    s.preserve_paths = 'libeposeasyselect.xcframework/**/*'
+    s.xcconfig = { 'OTHER_LDFLAGS' => '-framework libeposeasyselect' }
+    s.vendored_frameworks = 'libeposeasyselect.xcframework'
 end
