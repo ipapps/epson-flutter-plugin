@@ -8,12 +8,14 @@ public class PluginTestEpsonPlugin: NSObject, FlutterPlugin {
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
-  public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+  @objc public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "getPlatformVersion":
-      result("iOS " + UIDevice.current.systemVersion)
+       // result("iOS " + Bridge().getEposStatus())
+     result("iOS " + UIDevice.current.systemVersion)
     default:
       result(FlutterMethodNotImplemented)
     }
   }
+
 }
